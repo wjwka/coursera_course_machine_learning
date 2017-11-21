@@ -71,7 +71,6 @@ fprintf('Expected cost value (approx) 54.24\n');
 
 fprintf('Program paused. Press enter to continue.\n');
 pause;
-
 fprintf('\nRunning Gradient Descent ...\n')
 % run gradient descent
 theta = gradientDescent(X, y, theta, alpha, iterations);
