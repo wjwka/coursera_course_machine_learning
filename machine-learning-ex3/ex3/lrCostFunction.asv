@@ -38,11 +38,10 @@ grad = zeros(size(theta));
 a = sigmoid(X*theta);%prediction
 cost = (-y).*log(a) - (1-y).*log(1-a);
 J = sum(cost)/m;
-grad = sum(X'*(a-y),2)/m;
+grad = sum((a-y)'*X,1)/m;
 temp = theta;
-temp(1) = 0;
-J = J + sum(temp.^2)*lambda/(2*m);
-grad = grad + lambda*temp/m;
+temp(1) = o;
+grad = grad + sum(temp.^2)*lamb
 
 
 

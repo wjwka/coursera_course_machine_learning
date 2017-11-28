@@ -30,7 +30,11 @@ X = [ones(m, 1) X];
 %       for each row.
 %       
 
-
+test=X*all_theta';  
+prob= sigmoid(test); 
+[maximum,ind]=max(prob,[],2);
+ind(ind==10)=0;
+p=ind;
 
 
 
